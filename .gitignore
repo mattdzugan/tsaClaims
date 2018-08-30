@@ -1,0 +1,6 @@
+# the Raw Data because that's not nice
+raw/*
+preprocessed/*
+archive/*
+viz/data/categoryContours/*
+viz/img/*
