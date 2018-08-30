@@ -4,3 +4,7 @@ preprocessed/*
 archive/*
 viz/data/categoryContours/*
 viz/img/*
+
+# stupid things
+.RData
+.Rhistory
