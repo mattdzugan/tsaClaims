@@ -8,3 +8,4 @@ viz/img/*
 # stupid things
 .RData
 .Rhistory
+.ipynb_checkpoints

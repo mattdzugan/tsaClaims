@@ -1,0 +1,84 @@
+/* STYLE */
+body{
+  background-color: #f2fcfc;
+  font-family: 'Merriweather', serif;
+  color: #000D20;
+}
+h1, h2, h3, h4, h5{
+  font-family: 'Open Sans', sans-serif;
+  color: #000D20;
+}
+h1{
+  font-size: 2.85rem;
+}
+a{
+  color: #0245a3;
+  font-weight: bold;
+}
+.row{
+  margin-top:50px;
+}
+
+
+/* LEGEND */
+.legend{
+  margin-top:10px;
+  margin-bottom:40px;
+  font-size: 10px;
+  color: #45596c;
+  text-align: left;
+}
+.highlight{
+  color: #000D20;
+}
+.gradient{
+  height: 15px;
+}
+.gradientbox{
+  display: inline-block;
+  height: 15px;
+}
+.labels{
+  margin-top: 20px;
+}
+.legendLabel{
+  display: inline-block;
+}
+.legendLabelTextHolder{
+  width: 100px;
+  height: 15px;
+  float: left;
+}
+.legendLabelText{
+  float: left;
+  width: 100px;
+  transform: rotate(30deg);
+}
+
+
+
+/* SMALL MULTIPLES */
+.categoryDiv{
+  margin-bottom: 45px;
+  padding-left:  25px;
+  padding-right: 25px;
+}
+.categoryTitle{
+  margin-top: 8px;
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  color: #000D20;
+}
+.categoryAvg, .categoryWinner{
+  margin-top: 0px;
+  font-size: 10px;
+  color: #45596c;
+  margin-bottom: 0px;
+}
+
+
+/* BOTTOM */
+.finePrint{
+  font-size: 7.5px;
+}

@@ -1,0 +1,96 @@
+id,Airport.Code,Name,Lat,Lon
+2,ABQ,Albuquerque International Sunport Airport,35.0401992797852,-106.60900115966801
+12,ALB,Albany International Airport,42.748298645019496,-73.80169677734379
+16,ANC,Ted Stevens Anchorage International Airport,61.174400329589794,-149.996002197266
+18,ATL,Hartsfield Jackson Atlanta International Airport,33.6366996765137,-84.4281005859375
+20,AUS,Austin Bergstrom International Airport,30.194499969482397,-97.6698989868164
+24,BDL,Bradley International Airport,41.9388999939,-72.68319702149999
+29,BHM,Birmingham-Shuttlesworth International Airport,33.56290054,-86.75350189
+35,BNA,Nashville International Airport,36.1245002746582,-86.6781997680664
+36,BOI,Boise Air Terminal/Gowen field,43.56439972,-116.22299960000001
+37,BOS,General Edward Lawrence Logan International Airport,42.36429977,-71.00520325
+44,BTV,Burlington International Airport,44.471900939899996,-73.1532974243
+45,BUF,Buffalo Niagara International Airport,42.94049835,-78.73220062
+46,BUR,Bob Hope Airport,34.2006988525391,-118.35900115966801
+47,BWI,Baltimore/Washington International Thurgood Marshall Airport,39.17539978,-76.66829681
+53,CHS,Charleston Air Force Base-International Airport,32.89860153,-80.04049683
+56,CLE,Cleveland Hopkins International Airport,41.411701202399996,-81.8498001099
+58,CLT,Charlotte Douglas International Airport,35.2140007019043,-80.94309997558591
+59,CMH,Port Columbus International Airport,39.9980010986328,-82.8918991088867
+62,COS,City of Colorado Springs Municipal Airport,38.805801391602,-104.70099639893
+68,CVG,Cincinnati Northern Kentucky International Airport,39.0488014221,-84.6678009033
+71,DAL,Dallas Love Field,32.8470993041992,-96.85179901123051
+72,DAY,James M Cox Dayton International Airport,39.902400970459,-84.2193984985352
+74,DCA,Ronald Reagan Washington National Airport,38.8521,-77.037697
+75,DEN,Denver International Airport,39.861698150635,-104.672996521
+76,DFW,Dallas Fort Worth International Airport,32.896800994873,-97.0380020141602
+80,DSM,Des Moines International Airport,41.5340003967285,-93.6631011962891
+81,DTW,Detroit Metropolitan Wayne County Airport,42.2123985290527,-83.353401184082
+87,ELP,El Paso International Airport,31.80719948,-106.37799840000002
+93,EWR,Newark Liberty International Airport,40.6925010681152,-74.168701171875
+101,FLL,Fort Lauderdale Hollywood International Airport,26.0725994110107,-80.152702331543
+108,GEG,Spokane International Airport,47.619899749755895,-117.53399658203101
+116,GRR,Gerald R. Ford International Airport,42.88079834,-85.52279663
+118,GSP,Greenville Spartanburg International Airport,34.895698547399995,-82.2189025879
+124,HNL,Honolulu International Airport,21.3187007904053,-157.92199707031202
+125,HOU,William P Hobby Airport,29.64539909,-95.27890015
+131,IAD,Washington Dulles International Airport,38.94449997,-77.45580292
+133,IAH,George Bush Intercontinental Houston Airport,29.984399795532198,-95.34140014648442
+134,ICT,Wichita Mid Continent Airport,37.6498985290527,-97.43309783935551
+137,IND,Indianapolis International Airport,39.7173,-86.294403
+140,ISP,Long Island Mac Arthur Airport,40.79520035,-73.10019684
+145,JAX,Jacksonville International Airport,30.4941005706787,-81.6878967285156
+146,JFK,John F Kennedy International Airport,40.63980103,-73.77890015
+149,KOA,Kona International At Keahole Airport,19.7388000488281,-156.046005249023
+152,LAS,McCarran International Airport,36.08010101,-115.15200039999999
+154,LAX,Los Angeles International Airport,33.94250107,-118.40799709999999
+160,LGA,La Guardia Airport,40.77719879,-73.87259674
+161,LGB,Long Beach /Daugherty Field/ Airport,33.81769943,-118.15200039999999
+162,LIH,Lihue Airport,21.975999832153303,-159.339004516602
+163,LIT,Bill & Hillary Clinton National Airport/Adams Field,34.7294006348,-92.22429656979999
+173,MCI,Kansas City International Airport,39.2976,-94.713898
+174,MCO,Orlando International Airport,28.4293994903564,-81.3089981079102
+176,MDW,Chicago Midway International Airport,41.7859992980957,-87.7524032592773
+177,MEM,Memphis International Airport,35.0424003601074,-89.9766998291016
+182,MHT,Manchester Airport,42.93259811401371,-71.4356994628906
+183,MIA,Miami International Airport,25.793199539184602,-80.2906036376953
+184,MKE,General Mitchell International Airport,42.9472007751465,-87.89659881591801
+195,MSN,Dane County Regional Truax Field,43.1399002075195,-89.3375015258789
+197,MSP,Minneapolis-St Paul International/Wold-Chamberlain Airport,44.8819999695,-93.22180175780001
+198,MSY,Louis Armstrong New Orleans International Airport,29.9934005737305,-90.2580032348633
+201,MYR,Myrtle Beach International Airport,33.6796989441,-78.9282989502
+203,OAK,Metropolitan Oakland International Airport,37.7212982177734,-122.221000671387
+204,OGG,Kahului Airport,20.8985996246338,-156.429992675781
+205,OKC,Will Rogers World Airport,35.3931007385254,-97.60070037841801
+206,OMA,Eppley Airfield,41.3031997680664,-95.8940963745117
+208,ONT,Ontario International Airport,34.055999755859396,-117.60099792480499
+209,ORD,Chicago O'Hare International Airport,41.97859955,-87.90480042
+210,ORF,Norfolk International Airport,36.894599914550795,-76.2012023925781
+215,PBI,Palm Beach International Airport,26.6832008361816,-80.09559631347659
+216,PDX,Portland International Airport,45.58869934,-122.59799960000001
+221,PHL,Philadelphia International Airport,39.871898651123,-75.241096496582
+222,PHX,Phoenix Sky Harbor International Airport,33.434299468994105,-112.012001037598
+225,PIT,Pittsburgh International Airport,40.49150085,-80.23290253
+229,PSP,Palm Springs International Airport,33.829700469970696,-116.50700378418001
+230,PVD,Theodore Francis Green State Airport,41.7326011657715,-71.4204025268555
+231,PWM,Portland International Jetport Airport,43.64619827,-70.30930328
+235,RDU,Raleigh Durham International Airport,35.877601623535206,-78.7874984741211
+237,RIC,Richmond International Airport,37.505199432373,-77.3197021484375
+239,RNO,Reno Tahoe International Airport,39.4990997314453,-119.767997741699
+243,RSW,Southwest Florida International Airport,26.536199569702102,-81.7552032470703
+245,SAN,San Diego International Airport,32.7336006165,-117.190002441
+246,SAT,San Antonio International Airport,29.533700942993196,-98.4698028564453
+247,SAV,Savannah Hilton Head International Airport,32.12760162,-81.20210266
+253,SDF,Louisville International Standiford Field,38.1744,-85.736
+254,SEA,Seattle Tacoma International Airport,47.449001312255895,-122.30899810791
+256,SFO,San Francisco International Airport,37.61899948120121,-122.375
+261,SJC,Norman Y. Mineta San Jose International Airport,37.3625984191895,-121.929000854492
+263,SLC,Salt Lake City International Airport,40.788398742675795,-111.977996826172
+264,SMF,Sacramento International Airport,38.6954002380371,-121.59100341796899
+266,SNA,John Wayne Airport-Orange County Airport,33.67570114,-117.86799620000001
+269,SRQ,Sarasota Bradenton International Airport,27.395399093627898,-82.5543975830078
+270,STL,Lambert St Louis International Airport,38.7486991882324,-90.37000274658199
+274,SYR,Syracuse Hancock International Airport,43.111198425293,-76.1063003540039
+277,TPA,Tampa International Airport,27.9755001068115,-82.533203125
+280,TUL,Tulsa International Airport,36.1983985900879,-95.8880996704102
+281,TUS,Tucson International Airport,32.116100311279304,-110.94100189209

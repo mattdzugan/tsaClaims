@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon"
+      type="image/png"
+      href="./img/favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:600" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>What America Travels With</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 col-lg-4">
+          <h1>What America Travels With</h1>
+          <p>A regional exploration of our belongings using
+            <a href="https://www.dhs.gov/tsa-claims-data" target="_blank">TSA Claim Data</a> from US Airports
+          </p>
+          <div class="legend">
+          </div>
+        </div>
+
+        <!-- D3 gonna dump some stuff in here -->
+
+      </div>
+    </div>
+
+    <div class="container">
+      <p class="finePrint">
+        Here's How I did it.
+        Here's How I did it.
+        Here's How I did it.
+      </p>
+      <p class="footer">
+        Here's How I did it.
+        Here's How I did it.
+        Here's How I did it.
+      </p>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/d3.v3.min.js" ></script>
+    <script src="./js/domBuilder.js" ></script>
+    <script>
+    var colorList = ['#45596c','#556779','#657787','#768795','#8797a3','#98a6b1','#aab8c0','#bcc8cf','#cdd9de','#e0ebed','#f2fcfc','#cdecf7','#b5d9f2','#a1c6eb','#8db2e3','#7b9fda','#698cd0','#5779c6','#4368bb','#2b55af','#0245a3'];
+
+
+    var legendDescription = d3.select('.legend')
+                      .append("div")
+                      .attr("class","description")
+                      .style("width","100%")
+                      .html("local level of <span class='highlight'>TSA-claims-per-million-passenegers</span>"+
+                            " in each category relative to the national average level for claims in that category");
+    var gradient = d3.select('.legend')
+                      .append("div")
+                      .attr("class","gradient")
+                      .style("width","80%");
+    gradient.selectAll('.gradientbox')
+                      .data(colorList)
+                      .enter()
+                      .append("div")
+                      .attr("class","gradientbox")
+                      .attr("id",function(d,i){return ("gradientbox_"+i);})
+                      .style("width","4.7618%")
+                      .style("background-color",function(d){return d;})
+                      .style("border","0.5px solid #f2fcfc");
+    var label = d3.select('.legend')
+                      .append("div")
+                      .attr("class","labels")
+                      .style("width","100%");
+    label.append("div")
+          .attr("class","legendLabel")
+          .style("width","38%")
+              .append("div")
+              .attr("class","legendLabelTextHolder")
+                  .append("div")
+                  .attr("class","legendLabelText")
+                  .html("no claims");
+    label.append("div")
+          .attr("class","legendLabel")
+          .style("width","38%")
+              .append("div")
+              .attr("class","legendLabelTextHolder")
+                  .append("div")
+                  .attr("class","legendLabelText")
+                  .html("equal to national average");
+    label.append("div")
+          .attr("class","legendLabel")
+          .style("width","23%")
+              .append("div")
+              .attr("class","legendLabelTextHolder")
+                  .append("div")
+                  .attr("class","legendLabelText")
+                  .html("twice (or more) than average");
+
+    </script>
+  </body>
+</html>

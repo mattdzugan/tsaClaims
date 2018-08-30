@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+<title>D3.js v4 Mapping Tutorial 1</title>
+<style>
+body{
+  background-color: #f2fcfc;
+}
+svg{
+  /*
+  border: solid 2px red;
+  */
+}
+</style>
+</head>
+<body>
+  <button id='saveButton'>download</button><br>
+
+  <script src="https://cdn.rawgit.com/eligrey/canvas-toBlob.js/f1a01896135ab378aa5c0118eadd81da55e698d8/canvas-toBlob.js"></script>
+  <script src="https://cdn.rawgit.com/eligrey/FileSaver.js/e9d941381475b5df8b7d7691013401e171014e89/FileSaver.min.js"></script>
+
+<script src="./js/d3.v3.min.js"></script>
+<script>
+var width = 780*1.5;
+var height = 490*1.5;
+var myIdx = 11;
+var pathToContourJSON = "./data/categoryContours/category_"+myIdx+".geojson";
+var pathToContourJSON = "./data/categoryContours/category_"+myIdx+"_byClaim.geojson";
+var pathToImageOut    =                       "contourMap_"+myIdx+".png";
+
+
+	//
+  var projection = d3.geo.albersUsa()
+				   .translate([width/2, height/2])    // translate to center of screen
+				   .scale([1000*1.5*1.075]);
+
+	//
+	var path = d3.geo.path().projection(projection);　
+
+	//
+	var map = d3.select("body")
+		.append("svg")
+		.attr("width", width)
+		.attr("height", height);
+
+
+	//
+  var colorScale = d3.scale.linear()
+                      .domain([-110,-90,-80,-70,-60,-50,-40,-30,-20,-10,0,10,20,30,40,50,60,70,80,90,110])                         //
+                      //.domain([-110,-45,-40,-35,-30,-25,-20,-15,-10,-5, 0, 5,10,15,20,25,30,35,40,45,110])                         //
+                      //.range(['#537780','#648489','#759193','#859e9d','#97aba7','#a7b8b1','#b9c6bb','#cad4c5','#dce3cf','#edf1da','#ffffe4','#ecfcde','#d6f9d9','#c0f6d3','#abf1ce','#96edc9','#81e9c5','#6be5c2','#51dfbf','#37d9bd','#11d3bc']);
+                      //.range(['#283c63','#3f4b6d','#555a78','#696a83','#7e7c8e','#938c99','#a79ea4','#bbafb0','#d1c2bc','#e6d5c7','#fbe8d3','#fddbc9','#fecebf','#ffc2b5','#ffb4ab','#ffa8a2','#fe9a98','#fd8d8f','#fc7e85','#fa6f7c','#f85f73']);
+                      //.range(['#1c819e','#3e8ba3','#5695a9','#6b9eae','#7ea8b4','#90b3b9','#a1bdbe','#b2c7c4','#c4d1c9','#d5dccf','#e6e6d4','#ebe2c3','#f0deb2','#f4d9a1','#f7d590','#f9d27f','#fbcd6d','#fdc95a','#fec546','#ffc22c','#ffbe00']);
+                      //.range(['#c15d5a','#b1585b','#a1535b','#904e5a','#804958','#704456','#604052','#4e3b4d','#3f3648','#2e3143','#1b2c3c','#213b4d','#26495e','#2b5971','#2f6983','#337a95','#358ba9','#379cbb','#37aece','#36c2e3','#33d4f6'])
+                      //.range(['#45596c','#556779','#657787','#768795','#8797a3','#98a6b1','#aab8c0','#bcc8cf','#cdd9de','#e0ebed','#f2fcfc','#cdecf7','#b5d9f2','#a1c6eb','#8db2e3','#7b9fda','#698cd0','#5779c6','#4368bb','#2b55af','#0245a3'])
+                      .range(['#45596c','#556779','#657787','#768795','#8797a3','#98a6b1','#aab8c0','#bcc8cf','#cdd9de','#e0ebed','#f2fcfc','#cdecf7','#b5d9f2','#a1c6eb','#8db2e3','#7b9fda','#698cd0','#5779c6','#4368bb','#2b55af','#0245a3'])
+
+
+  var cartoScale = d3.scale.linear()
+                      .domain([-100,-66,-33,0,33,66,100])
+                      //.range(['#009392','#39b185','#9ccb86','#e9e29c','#eeb479','#e88471','#cf597e']);
+                      .range(['#009B9E','#42B7B9','#A7D3D4','#F1F1F1','#E4C1D9','#D691C1','#C75DAB'])
+                      .range(['#045275','#089099','#7ccba2','#fcde9c','#f0746e','#dc3977','#7c1d6f'])
+
+	//d3.json("./data/demo.geojson",function(geojson){
+  d3.json(pathToContourJSON,function(geojson){
+    //console.log(err)
+
+    map.selectAll(".contours")
+			.data(geojson.features)
+			.enter()
+			.append("path")
+      .attr("class","contours")
+			.attr("d", path)
+			.attr("fill", function(d){return colorScale(d.properties.levels);})
+			.attr("fill-opacity", 1.0)
+			//.attr("stroke", "#000")
+      .attr("stroke-width",0.75)
+      .attr("stroke", function(d){return colorScale(d.properties.levels);});
+
+
+
+      d3.json("./data/us-states.json", function(json) {
+        map.selectAll(".states")
+        	.data(json.features)
+        	.enter()
+        	.append("path")
+        	.attr("d", path)
+          .attr("class","states")
+        	.style("stroke", "rgba(0,0,0,0.95)")
+        	.style("stroke-width", "0.1")
+          .style("fill","none");
+
+        d3.csv("./data/airports.csv", function(csvdata) {
+          map.selectAll(".airports")
+          	.data(csvdata)
+          	.enter()
+          	.append("circle")
+          	.attr("cx", function(d){return projection([d.Lon, d.Lat])[0];})
+            .attr("cy", function(d){return projection([d.Lon, d.Lat])[1];})
+            .attr("r",2)
+            .attr("class","airports")
+          	.style("fill", "#20284F")
+            .style("stroke","none");
+
+          }); //end airports.csv
+      }); //end us-states.json
+  }); // end Contours
+
+
+
+
+
+
+
+
+
+
+
+  // Set-up the export button
+  d3.select('#saveButton').on('click', function(){
+  	var svgString = getSVGString(map.node());
+  	svgString2Image( svgString, 1*width, 1*height, 'png', save ); // passes Blob and filesize String to the callback
+
+  	function save( dataBlob, filesize ){
+  		saveAs( dataBlob, pathToImageOut ); // FileSaver.js function
+  	}
+  });
+
+  // Below are the functions that handle actual exporting:
+  // getSVGString ( svgNode ) and svgString2Image( svgString, width, height, format, callback )
+  function getSVGString( svgNode ) {
+  	svgNode.setAttribute('xlink', 'http://www.w3.org/1999/xlink');
+  	var cssStyleText = getCSSStyles( svgNode );
+  	appendCSS( cssStyleText, svgNode );
+
+  	var serializer = new XMLSerializer();
+  	var svgString = serializer.serializeToString(svgNode);
+  	svgString = svgString.replace(/(\w+)?:?xlink=/g, 'xmlns:xlink='); // Fix root xlink without namespace
+  	svgString = svgString.replace(/NS\d+:href/g, 'xlink:href'); // Safari NS namespace fix
+
+  	return svgString;
+
+  	function getCSSStyles( parentElement ) {
+  		var selectorTextArr = [];
+
+  		// Add Parent element Id and Classes to the list
+  		selectorTextArr.push( '#'+parentElement.id );
+  		for (var c = 0; c < parentElement.classList.length; c++)
+  				if ( !contains('.'+parentElement.classList[c], selectorTextArr) )
+  					selectorTextArr.push( '.'+parentElement.classList[c] );
+
+  		// Add Children element Ids and Classes to the list
+  		var nodes = parentElement.getElementsByTagName("*");
+  		for (var i = 0; i < nodes.length; i++) {
+  			var id = nodes[i].id;
+  			if ( !contains('#'+id, selectorTextArr) )
+  				selectorTextArr.push( '#'+id );
+
+  			var classes = nodes[i].classList;
+  			for (var c = 0; c < classes.length; c++)
+  				if ( !contains('.'+classes[c], selectorTextArr) )
+  					selectorTextArr.push( '.'+classes[c] );
+  		}
+
+  		// Extract CSS Rules
+  		var extractedCSSText = "";
+  		for (var i = 0; i < document.styleSheets.length; i++) {
+  			var s = document.styleSheets[i];
+
+  			try {
+  			    if(!s.cssRules) continue;
+  			} catch( e ) {
+  		    		if(e.name !== 'SecurityError') throw e; // for Firefox
+  		    		continue;
+  		    	}
+
+  			var cssRules = s.cssRules;
+  			for (var r = 0; r < cssRules.length; r++) {
+  				if ( contains( cssRules[r].selectorText, selectorTextArr ) )
+  					extractedCSSText += cssRules[r].cssText;
+  			}
+  		}
+
+
+  		return extractedCSSText;
+
+  		function contains(str,arr) {
+  			return arr.indexOf( str ) === -1 ? false : true;
+  		}
+
+  	}
+
+  	function appendCSS( cssText, element ) {
+  		var styleElement = document.createElement("style");
+  		styleElement.setAttribute("type","text/css");
+  		styleElement.innerHTML = cssText;
+  		var refNode = element.hasChildNodes() ? element.children[0] : null;
+  		element.insertBefore( styleElement, refNode );
+  	}
+  }
+
+
+  function svgString2Image( svgString, width, height, format, callback ) {
+  	var format = format ? format : 'png';
+
+  	var imgsrc = 'data:image/svg+xml;base64,'+ btoa( unescape( encodeURIComponent( svgString ) ) ); // Convert SVG string to data URL
+
+  	var canvas = document.createElement("canvas");
+  	var context = canvas.getContext("2d");
+
+  	canvas.width = width;
+  	canvas.height = height;
+
+  	var image = new Image();
+  	image.onload = function() {
+  		context.clearRect ( 0, 0, width, height );
+  		context.drawImage(image, 0, 0, width, height);
+
+  		canvas.toBlob( function(blob) {
+  			var filesize = Math.round( blob.length/1024 ) + ' KB';
+  			if ( callback ) callback( blob, filesize );
+  		});
+
+
+  	};
+
+  	image.src = imgsrc;
+  }
+
+
+</script>
+</body>
+</html>

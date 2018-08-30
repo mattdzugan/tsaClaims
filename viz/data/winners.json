@@ -1,0 +1,251 @@
+[{
+	"idx": 0,
+	"val": 0,
+	"globalAvgVal": 0.0,
+	"winnerVal": 0.0,
+	"Catg": "other",
+	"Code": "ABQ",
+	"Name": "Albuquerque International Sunport Airport",
+	"Lat": 35.0401992797852,
+	"Lon": -106.60900115966801
+}, {
+	"idx": 1,
+	"val": 351.85143191067334,
+	"globalAvgVal": 2.0029749589806525e-06,
+	"winnerVal": 9.0504710329663e-06,
+	"Catg": "baggage/cases/purses",
+	"Code": "COS",
+	"Name": "City of Colorado Springs Municipal Airport",
+	"Lat": 38.805801391602,
+	"Lon": -104.70099639893
+}, {
+	"idx": 2,
+	"val": 197.15004524788148,
+	"globalAvgVal": 5.660258078629955e-07,
+	"winnerVal": 1.681945944179578e-06,
+	"Catg": "personal electronics",
+	"Code": "COS",
+	"Name": "City of Colorado Springs Municipal Airport",
+	"Lat": 38.805801391602,
+	"Lon": -104.70099639893
+}, {
+	"idx": 3,
+	"val": 256.74082219264807,
+	"globalAvgVal": 1.401253829901072e-07,
+	"winnerVal": 4.998844433795055e-07,
+	"Catg": "toys & games",
+	"Code": "ORF",
+	"Name": "Norfolk International Airport",
+	"Lat": 36.894599914550795,
+	"Lon": -76.2012023925781
+}, {
+	"idx": 4,
+	"val": 789.8438007028279,
+	"globalAvgVal": 2.517794978669856e-08,
+	"winnerVal": 2.2404442532100804e-07,
+	"Catg": "office equipment & supplies",
+	"Code": "BTV",
+	"Name": "Burlington International Airport",
+	"Lat": 44.471900939899996,
+	"Lon": -73.1532974243
+}, {
+	"idx": 5,
+	"val": 345.44743117991345,
+	"globalAvgVal": 1.6688625029504122e-06,
+	"winnerVal": 7.433905149317419e-06,
+	"Catg": "clothing",
+	"Code": "ALB",
+	"Name": "Albany International Airport",
+	"Lat": 42.748298645019496,
+	"Lon": -73.80169677734379
+}, {
+	"idx": 6,
+	"val": 136.41507436769407,
+	"globalAvgVal": 9.171360359011336e-07,
+	"winnerVal": 2.1682478413285866e-06,
+	"Catg": "computer & accessories",
+	"Code": "SAV",
+	"Name": "Savannah Hilton Head International Airport",
+	"Lat": 32.12760162,
+	"Lon": -81.20210266
+}, {
+	"idx": 7,
+	"val": 191.43502367239606,
+	"globalAvgVal": 1.2684587360893705e-06,
+	"winnerVal": 3.6967330177966327e-06,
+	"Catg": "jewelry & watches",
+	"Code": "BTV",
+	"Name": "Burlington International Airport",
+	"Lat": 44.471900939899996,
+	"Lon": -73.1532974243
+}, {
+	"idx": 8,
+	"val": 333.69824437219904,
+	"globalAvgVal": 4.4321690510593414e-07,
+	"winnerVal": 1.922223936205232e-06,
+	"Catg": "personal accessories",
+	"Code": "COS",
+	"Name": "City of Colorado Springs Municipal Airport",
+	"Lat": 38.805801391602,
+	"Lon": -104.70099639893
+}, {
+	"idx": 9,
+	"val": 218.1829010662311,
+	"globalAvgVal": 1.151492817460024e-06,
+	"winnerVal": 3.663853252163585e-06,
+	"Catg": "cameras",
+	"Code": "ALB",
+	"Name": "Albany International Airport",
+	"Lat": 42.748298645019496,
+	"Lon": -73.80169677734379
+}, {
+	"idx": 10,
+	"val": 347.55611568556515,
+	"globalAvgVal": 2.5964096742063834e-07,
+	"winnerVal": 1.1620390285162327e-06,
+	"Catg": "audio/video",
+	"Code": "SYR",
+	"Name": "Syracuse Hancock International Airport",
+	"Lat": 43.111198425293,
+	"Lon": -76.1063003540039
+}, {
+	"idx": 11,
+	"val": 613.697978693203,
+	"globalAvgVal": 5.835547602461401e-07,
+	"winnerVal": 4.164818528444669e-06,
+	"Catg": "cosmetics & grooming",
+	"Code": "COS",
+	"Name": "City of Colorado Springs Municipal Airport",
+	"Lat": 38.805801391602,
+	"Lon": -104.70099639893
+}, {
+	"idx": 12,
+	"val": 493.8542539687595,
+	"globalAvgVal": 1.1329015043263859e-06,
+	"winnerVal": 6.727783776718312e-06,
+	"Catg": "household items",
+	"Code": "COS",
+	"Name": "City of Colorado Springs Municipal Airport",
+	"Lat": 38.805801391602,
+	"Lon": -104.70099639893
+}, {
+	"idx": 13,
+	"val": 334.6294221369728,
+	"globalAvgVal": 4.8868594522706065e-08,
+	"winnerVal": 2.123972899804977e-07,
+	"Catg": "musical instruments & accessories",
+	"Code": "ALB",
+	"Name": "Albany International Airport",
+	"Lat": 42.748298645019496,
+	"Lon": -73.80169677734379
+}, {
+	"idx": 14,
+	"val": 1890.5721897849944,
+	"globalAvgVal": 4.791246984726182e-08,
+	"winnerVal": 9.537323002187146e-07,
+	"Catg": "hunting & fishing items",
+	"Code": "ANC",
+	"Name": "Ted Stevens Anchorage International Airport",
+	"Lat": 61.174400329589794,
+	"Lon": -149.996002197266
+}, {
+	"idx": 15,
+	"val": 663.9642763310105,
+	"globalAvgVal": 1.991926407175519e-07,
+	"winnerVal": 1.5217606161624754e-06,
+	"Catg": "medical/science",
+	"Code": "COS",
+	"Name": "City of Colorado Springs Municipal Airport",
+	"Lat": 38.805801391602,
+	"Lon": -104.70099639893
+}, {
+	"idx": 16,
+	"val": 385.8655404299067,
+	"globalAvgVal": 7.606502973534248e-08,
+	"winnerVal": 3.6957376780179096e-07,
+	"Catg": "food & drink",
+	"Code": "PSP",
+	"Name": "Palm Springs International Airport",
+	"Lat": 33.829700469970696,
+	"Lon": -116.50700378418001
+}, {
+	"idx": 17,
+	"val": 603.9602372017879,
+	"globalAvgVal": 1.466057835681182e-08,
+	"winnerVal": 1.0320464217576646e-07,
+	"Catg": "automobile parts & accessories",
+	"Code": "JFK",
+	"Name": "John F Kennedy International Airport",
+	"Lat": 40.63980103,
+	"Lon": -73.77890015
+}, {
+	"idx": 18,
+	"val": 339.85370172678375,
+	"globalAvgVal": 4.4619151520731625e-08,
+	"winnerVal": 1.9625898964302059e-07,
+	"Catg": "tools & home improvement supplies",
+	"Code": "BOI",
+	"Name": "Boise Air Terminal/Gowen field",
+	"Lat": 43.56439972,
+	"Lon": -116.22299960000001
+}, {
+	"idx": 19,
+	"val": 927.6373312024454,
+	"globalAvgVal": 8.573251256483433e-08,
+	"winnerVal": 8.810193040940647e-07,
+	"Catg": "sporting equipment & supplies",
+	"Code": "COS",
+	"Name": "City of Colorado Springs Municipal Airport",
+	"Lat": 38.805801391602,
+	"Lon": -104.70099639893
+}, {
+	"idx": 20,
+	"val": 797.5144223813564,
+	"globalAvgVal": 4.4619151520731625e-08,
+	"winnerVal": 4.004633200427567e-07,
+	"Catg": "books, magazines & other",
+	"Code": "COS",
+	"Name": "City of Colorado Springs Municipal Airport",
+	"Lat": 38.805801391602,
+	"Lon": -104.70099639893
+}, {
+	"idx": 21,
+	"val": 547.0977063761405,
+	"globalAvgVal": 7.13906424331706e-08,
+	"winnerVal": 4.6196720975223867e-07,
+	"Catg": "home decor",
+	"Code": "PSP",
+	"Name": "Palm Springs International Airport",
+	"Lat": 33.829700469970696,
+	"Lon": -116.50700378418001
+}, {
+	"idx": 22,
+	"val": 1007.7443607418803,
+	"globalAvgVal": 1.6466591632650956e-08,
+	"winnerVal": 1.8240774021708526e-07,
+	"Catg": "outdoor items",
+	"Code": "PWM",
+	"Name": "Portland International Jetport Airport",
+	"Lat": 43.64619827,
+	"Lon": -70.30930328
+}, {
+	"idx": 23,
+	"val": 594.6677288452372,
+	"globalAvgVal": 8.095188918761309e-08,
+	"winnerVal": 5.623466500769049e-07,
+	"Catg": "travel accessories",
+	"Code": "ISP",
+	"Name": "Long Island Mac Arthur Airport",
+	"Lat": 40.79520035,
+	"Lon": -73.10019684
+}, {
+	"idx": 24,
+	"val": 690.193673313125,
+	"globalAvgVal": 1.7210244157996485e-08,
+	"winnerVal": 1.3599426049822992e-07,
+	"Catg": "crafting & hobby",
+	"Code": "GRR",
+	"Name": "Gerald R. Ford International Airport",
+	"Lat": 42.88079834,
+	"Lon": -85.52279663
+}]
