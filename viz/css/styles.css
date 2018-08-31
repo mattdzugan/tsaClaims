@@ -13,7 +13,6 @@ h1{
 }
 a{
   color: #0245a3;
-  font-weight: bold;
 }
 .row{
   margin-top:50px;
@@ -29,10 +28,11 @@ a{
   text-align: left;
 }
 .highlight{
-  color: #000D20;
+
 }
 .gradient{
   height: 15px;
+  width:66%;
 }
 .gradientbox{
   display: inline-block;
@@ -80,5 +80,19 @@ a{
 
 /* BOTTOM */
 .finePrint{
-  font-size: 7.5px;
+  color: #45596c;
+  font-size: 8px;
+}
+.code{
+  font-family: monospace;
+}
+.footer{
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+.footer a{
+  margin-left: 10px;
+  margin-right: 10px;
 }

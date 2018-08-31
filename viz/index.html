@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:600" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Dank Lazy Load Stuff -->
+    <link rel="stylesheet" href="./css/progressive-image.min.css">
+    <script src="./js/progressive-image.min.js"></script>
 
     <title>What America Travels With</title>
   </head>
@@ -36,14 +41,36 @@
 
     <div class="container">
       <p class="finePrint">
-        Here's How I did it.
-        Here's How I did it.
-        Here's How I did it.
+        Visualization was generated as a part of the <a href="https://www.reddit.com/r/dataisbeautiful/comments/950j3n/battle_dataviz_battle_for_the_month_of_august/" target="_blank">r/dataisbeautiful August 2018 competition</a>.
+
+        Data was obtained from <a href="https://www.dhs.gov/tsa-claims-data" target="_blank">Department of Homeland Security</a>, and thanks to reddit user <a href="https://www.reddit.com/user/gi_funk" target="_blank">gi_funk</a> for giving a head start parsing the PDF files.
+
+        The TSA appears to have switched their list of categories they use to describe the items between 2009 and 2010.
+        To handle this I manually created a <a href="https://github.com/mattdzugan/tsaClaims/blob/master/dump/mapping.csv" target="_blank">mapping from each of the old categories to the current categories</a> such that all claims could be categorized in the new system.
+
+        It should be noted that some claims can have multiple categories, likely because multiple items get damaged/lost. That's fine!
+
+        The next stage was to aggregate the claims by airport, and join in some airport metadata like coordinates as well as yearly passenger count
+
+        With everything neatly organized by airport, we're ready to create a map.
+        I wanted to make sure I captured the idea that the passengers traveling via the airport are not just "at the airport" they're going to/from the areas surrounding it.
+        For this (as well as aesthetic) reason I decided to use a heatmap rather than a bunch of dots.
+
+        In order to implement the heatmap effect, I needed a way to interpolate the value at all the non-airport points.
+        I wanted to capture the fact that travelers in a given area will likely use one of the handful of "nearest" airports, but were also more likely to go to the closest and biggest one.
+        As such, I implemented a weighted average according to <span class="code">YearlyAirportPassengers/Distance<sup>2</sup></span>
+
+        The heatmap was then rescaled from absolute quantities to be <span class="code">% Difference</span> from the national level.
+
+        Code can be found in full on <a href="https://github.com/mattdzugan/tsaClaims" target="_blank">github</a>.
       </p>
       <p class="footer">
-        Here's How I did it.
-        Here's How I did it.
-        Here's How I did it.
+        <a href="https://github.com/mattdzugan/tsaClaims" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="http://mattdzugan.com" target="_blank">
+          Matt Dzugan
+        </a>
       </p>
     </div>
 
@@ -63,12 +90,12 @@
                       .append("div")
                       .attr("class","description")
                       .style("width","100%")
-                      .html("local level of <span class='highlight'>TSA-claims-per-million-passenegers</span>"+
-                            " in each category relative to the national average level for claims in that category");
+                      .html("local proprtion of <span class='highlight'>TSA-claims</span>"+
+                            " in each category relative to the national average rate of claims in that category");
     var gradient = d3.select('.legend')
                       .append("div")
-                      .attr("class","gradient")
-                      .style("width","80%");
+                      .attr("class","gradient");
+                      // /.style("width","80%");
     gradient.selectAll('.gradientbox')
                       .data(colorList)
                       .enter()
@@ -84,7 +111,7 @@
                       .style("width","100%");
     label.append("div")
           .attr("class","legendLabel")
-          .style("width","38%")
+          .style("width","30%")
               .append("div")
               .attr("class","legendLabelTextHolder")
                   .append("div")
@@ -92,7 +119,7 @@
                   .html("no claims");
     label.append("div")
           .attr("class","legendLabel")
-          .style("width","38%")
+          .style("width","30%")
               .append("div")
               .attr("class","legendLabelTextHolder")
                   .append("div")
@@ -100,12 +127,12 @@
                   .html("equal to national average");
     label.append("div")
           .attr("class","legendLabel")
-          .style("width","23%")
+          .style("width","40%")
               .append("div")
               .attr("class","legendLabelTextHolder")
                   .append("div")
                   .attr("class","legendLabelText")
-                  .html("twice (or more) than average");
+                  .html("twice national average (or more)");
 
     </script>
   </body>
